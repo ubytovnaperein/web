@@ -1394,3 +1394,8 @@ section,
 html {
   scroll-behavior: smooth;
 }
+
+.services-list {
+  text-align: left;
+  list-style-type: none;
+}
