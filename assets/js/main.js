@@ -66,10 +66,10 @@
     window.addEventListener('load', () => {
       setTimeout(() => {
         preloader.classList.add('loaded');
-      }, 1000);
+      }, 600);
       setTimeout(() => {
         preloader.remove();
-      }, 2000);
+      }, 1400);
     });
   }
 
@@ -90,7 +90,7 @@
       behavior: 'smooth'
     });
   });
-
+  
   window.addEventListener('load', toggleScrollTop);
   document.addEventListener('scroll', toggleScrollTop);
 
