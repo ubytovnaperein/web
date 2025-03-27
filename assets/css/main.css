@@ -1390,3 +1390,7 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+
+html {
+  scroll-behavior: smooth;
+}

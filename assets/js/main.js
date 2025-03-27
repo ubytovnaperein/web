@@ -133,4 +133,28 @@
 
   window.addEventListener("load", initSwiper);
 
+  /**
+   * Form submission with redirect
+   */
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector(".php-email-form");
+    if (form) {
+      form.addEventListener("submit", function (event) {
+        event.preventDefault(); // Zabráni obnoveniu stránky
+
+        fetch(form.action, {
+          method: form.method,
+          body: new FormData(form),
+          headers: { "Accept": "application/json" }
+        }).then(response => {
+          if (response.ok) {
+            window.location.href = "thanks.html"; // Presmerovanie na vlastnú stránku
+          } else {
+            alert("Chyba pri odosielaní formulára!");
+          }
+        }).catch(error => console.error("Error:", error));
+      });
+    }
+  });
+
 })();
