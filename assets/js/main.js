@@ -131,6 +131,11 @@
     });
   }
 
-  window.addEventListener("load", initSwiper);
+  // window.addEventListener("load", initSwiper);
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      document.querySelector('#hero').scrollIntoView({ behavior: 'smooth' });
+    }, 50); // Krátke oneskorenie pre lepšiu plynulosť
+  });
 
 })();
